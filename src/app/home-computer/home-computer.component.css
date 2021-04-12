@@ -20,11 +20,11 @@ input, button {
 }
 
 .barre-outil {
-  height: 100vh;
+  height: 96.4vh;
 }
 
 .desktop {
-  height: 100vh;
+  height: 96.4vh;
   background-image: url('../../assets/full-screen.jpg');
   background-size: cover;
 
