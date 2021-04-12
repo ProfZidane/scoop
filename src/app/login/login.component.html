@@ -15,6 +15,8 @@
     </div>
 
     <div class="col-md-7 bord">
+      <mat-progress-bar mode="query"  *ngIf="loading === false"></mat-progress-bar>
+
       <small class="pww">J'ai oublié mon mot de passe? <a href="">Cliquez-ici</a></small>
 
       <div class="header">
@@ -22,17 +24,17 @@
       </div>
 
       <div class="container login-form">
-        <form>
+        <form method="POST" (ngSubmit)="login()">
           <div class="form-group">
             <label for="exampleInputEmail1">Adresse E-mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" name="email" [(ngModel)]="userInfo.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Mot de passe</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" name="password" [(ngModel)]="userInfo.password" class="form-control" id="exampleInputPassword1">
           </div>
           <br>
-          <button type="submit" class="btn bg-scoop-primary text-light" style="width: 100%;" (click)="login()">Se connecter</button>
+          <button type="submit" class="btn bg-scoop-primary text-light" style="width: 100%;">Se connecter</button>
         </form>
       </div>
 

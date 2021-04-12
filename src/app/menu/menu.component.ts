@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  dropdown = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  DropdownToogle() {
+    this.dropdown = true;
   }
 
 }

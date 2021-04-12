@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { HomeComponent } from './home/home.component';
 import { HomeComputerComponent } from './home-computer/home-computer.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -16,11 +17,13 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'home-computer',
-    component: HomeComputerComponent
+    component: HomeComputerComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
