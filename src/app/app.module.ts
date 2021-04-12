@@ -8,6 +8,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MenuComponent } from './menu/menu.component';
+import { HomeComputerComponent } from './home-computer/home-computer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuComponent } from './menu/menu.component';
     ForgotPasswordComponent,
     HomeComponent,
     NavbarComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComputerComponent
   ],
   imports: [
     BrowserModule,

@@ -13,14 +13,31 @@ input, button {
 
 
 .symbol {
-  border: solid 1px;
-  width: 50%;
+  /*border: solid 1px;*/
+  width: 60%;
   cursor: pointer;
 }
 
-i {
-  font-size: 95px;
-  font-weight: 100;
-  color: #435a5a;
+.symbol:hover {
+  border: solid 1px #fff;
 }
 
+.symbol img {
+  height: 50%;
+  width: 50%;
+}
+
+.symbol p {
+  color: #fff;
+}
+
+i {
+  font-size: 65px;
+  font-weight: 100;
+  color: #E53A14;
+}
+
+.carousel-indicators {
+  position: fixed;
+  bottom: 0;
+}

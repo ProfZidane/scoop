@@ -1,0 +1,51 @@
+h3 {
+  font-family: 'Train One', cursive;
+  font-size: 30px;
+}
+
+p, label, small {
+  font-family: 'Fredoka One', cursive;
+}
+
+input, button {
+  border-radius: 0;
+}
+
+.bord {
+  border: solid;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.barre-outil {
+  height: 100vh;
+}
+
+.desktop {
+  height: 100vh;
+  background-image: url('../../assets/full-screen.jpg');
+  background-size: cover;
+
+}
+
+.option {
+  width: 100%;
+}
+
+.option i {
+
+  font-size: 65px;
+}
+
+.option img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-option {
+  border: ridge 3px rgb(250, 72, 72);
+  background-color: rgb(223, 84, 20);
+  cursor: pointer;
+}
