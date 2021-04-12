@@ -1,0 +1,26 @@
+h3 {
+  font-family: 'Train One', cursive;
+  font-size: 30px;
+}
+
+p, label, small {
+  font-family: 'Fredoka One', cursive;
+}
+
+input, button {
+  border-radius: 0;
+}
+
+
+.symbol {
+  border: solid 1px;
+  width: 50%;
+  cursor: pointer;
+}
+
+i {
+  font-size: 95px;
+  font-weight: 100;
+  color: #435a5a;
+}
+

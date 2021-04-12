@@ -1,0 +1,48 @@
+h3 {
+  font-family: 'Train One', cursive;
+}
+
+p, label, small {
+  font-family: 'Fredoka One', cursive;
+}
+
+input, button {
+  border-radius: 0;
+}
+
+
+.header {
+  padding: 0;
+}
+
+.window-message {
+  border-radius: 20px;
+  height: 200px;
+  margin-top: 2rem;
+  box-shadow: 5px 5px 5px 5px #dad2d2;
+  padding: 0rem;
+}
+
+.i {
+  font-size: 140px;
+
+}
+
+.c {
+  float: right;
+  color: red;
+}
+
+
+.footer {
+  padding: 3rem;
+}
+
+.full-body {
+  background-color: azure;
+  opacity: 0.7;
+}
+
+
+.menu {
+}

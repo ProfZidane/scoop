@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.text-scoop-primary {
+  color: #E53A14;
+}
+
+.bg-scoop-primary {
+  background-color: #E53A14;
+}
+
+.text-scoop-secondary {
+  color: #435a5a;
+}
+
+.bg-scoop-seconday {
+  background-color: #435a5a;
+}
+
+
+.text-lce-primary {
+  color: #EC911D;
+}
+
+
