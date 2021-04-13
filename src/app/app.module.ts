@@ -14,7 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import { DndModule } from 'ngx-drag-drop';
+import { AccountManagementComponent } from './account-management/account-management.component';
+import { DataTablesModule } from 'angular-datatables';
+import { WarehouseManagementComponent } from './warehouse-management/warehouse-management.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     HomeComponent,
     NavbarComponent,
     MenuComponent,
-    HomeComputerComponent
+    HomeComputerComponent,
+    AccountManagementComponent,
+    WarehouseManagementComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    DndModule,
+    DataTablesModule
   ],
   providers: [
     AuthService

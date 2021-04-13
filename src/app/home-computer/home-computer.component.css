@@ -21,13 +21,18 @@ input, button {
 
 .barre-outil {
   height: 96.4vh;
+  padding: 1.5rem;
+}
+
+.favoris {
+  padding: 0.5rem;
+  transform: translateY(40%);
 }
 
 .desktop {
   height: 96.4vh;
-  background-image: url('../../assets/full-screen.jpg');
+  background-image: url('../../assets/barley-field-1684052_1920.jpg');
   background-size: cover;
-
 }
 
 .option {
@@ -45,7 +50,13 @@ input, button {
 }
 
 .menu-option {
-  border: ridge 3px rgb(250, 72, 72);
-  background-color: rgb(223, 84, 20);
+  /*background-color: white;*/
+  /*border: ridge 3px rgb(247, 250, 72);
+  background-color: #f0ad4e;*/
   cursor: pointer;
+}
+
+.menu-option:hover {
+  border: solid 1px;
+  border-color: white;
 }

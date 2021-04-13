@@ -4,7 +4,10 @@ h3 {
 }
 
 p, label, small {
-  font-family: 'Fredoka One', cursive;
+  /*font-family: 'Fredoka One', cursive;*/
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
 }
 
 input, button {

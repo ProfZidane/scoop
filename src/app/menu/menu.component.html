@@ -6,25 +6,29 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <div class="row">
-        <div class="col-md-3" align="center" (contextmenu)="DropdownToogle()">
-          <div class="symbol">
+      <div class="row" >
+        <div class="col-md-3" align="center" [dndDraggable]="dndData.fn"
+        [dndEffectAllowed]="draggable.effectAllowed"
+        [dndDisableIf]="draggable.disable"
+        (dndStart)="onDragStart($event)">
+          <div class="symbol" draggable="true">
             <img src="https://img.icons8.com/color/48/000000/us-dollar.png"/>
-          </div>
-          <div class="bg-light" *ngIf="dropdown === true">
-            <a class="dropdown-item" href="#">Ajouter aux favoris</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-danger" href="#">Signaler un problème</a>
           </div>
           <p class="text-light">Financement</p>
         </div>
-        <div class="col-md-3" align="center">
+        <div class="col-md-3" align="center" [dndDraggable]="dndData.sl"
+        [dndEffectAllowed]="draggable.effectAllowed"
+        [dndDisableIf]="draggable.disable"
+        (dndStart)="onDragStart($event)">
           <div class="symbol">
             <img src="https://img.icons8.com/color/48/000000/sales-performance.png"/>
           </div>
           <p class="text-light">Achats/Ventes</p>
         </div>
-        <div class="col-md-3" align="center">
+        <div class="col-md-3" align="center" [dndDraggable]="dndData.cm"
+        [dndEffectAllowed]="draggable.effectAllowed"
+        [dndDisableIf]="draggable.disable"
+        (dndStart)="onDragStart($event)">
           <div class="symbol">
             <img src="https://img.icons8.com/color/48/000000/date-span.png"/>
           </div>
@@ -135,16 +139,16 @@
       <div class="row">
 
         <div class="col-md-3" align="center">
-          <div class="symbol">
+          <div class="symbol" (click)="ManageAccount()">
             <img src="https://img.icons8.com/color/48/000000/checked-user-male--v1.png"/>
           </div>
-          <p class="text-light">Comptes Utilisateurs</p>
+          <p class="text-light" (click)="ManageAccount()">Comptes Utilisateurs</p>
         </div>
         <div class="col-md-3" align="center">
-          <div class="symbol">
+          <div class="symbol" (click)="ManageWarehouse()">
             <img src="https://img.icons8.com/color/48/000000/warehouse.png"/>
           </div>
-          <p class="text-light">Entrepôts</p>
+          <p class="text-light" (click)="ManageWarehouse()">Entrepôts</p>
         </div>
         <div class="col-md-3" align="center">
           <div class="symbol">

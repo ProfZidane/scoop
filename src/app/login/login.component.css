@@ -56,9 +56,11 @@ input, button {
 
 
 #back-image {
-  background-image: url('https://image.freepik.com/photos-gratuite/fruits-cajou-anacardium-occidentale-isoles-fond-blanc_63373-152.jpg');
-  background-size: cover;
-  background-position-x: center;
+  /*background-image: url('https://image.freepik.com/photos-gratuite/fruits-cajou-anacardium-occidentale-isoles-fond-blanc_63373-152.jpg');*/
+  /*background-image: url('../../assets/anacarde.jpg');*/
+  background-image: url('https://cdn.pixabay.com/photo/2015/11/26/12/03/cashew-fruit-1063783_960_720.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #back-image h3 {
@@ -70,7 +72,7 @@ input, button {
 }
 
 #back-image p {
-  color: #000000;
+  color: #fff;
   text-align: left;
 
 }

@@ -3,38 +3,57 @@
       <div class="col-md-12 bg-dark text-light p-1" style="display: inline-block; height: 25px;">
         <h6 style="font-size: small ;">SCOOP-SYS</h6>
         <small class="p-1" style="position: absolute; top: 0; right: 5px;" *ngIf="toDay && nameUser">
-          {{ nameUser }} {{ toDay }}
+          {{ nameUser }} &nbsp; {{ toDay }} &nbsp;&nbsp; <a href="" class="text-muted" style="text-decoration: underline;">Déconnexion</a>
         </small>
       </div>
   </div>
+  <!--<div class="row">
+
+    <div class="col-md-1 barre-outil bord">
+      <small>SCOOP</small>
+      <div class="option" align="center">
+        <img src="https://img.icons8.com/color/48/000000/sales-performance.png"/>
+      </div>
+    </div>
+
+    <div class="col-md-11 desktop bord">
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+  </div>-->
   <div class="row">
 
-    <div class="col-md-1 barre-outil bg-scoop-primary" >
-      <div class="row">
-        <div class="col-md-12 menu-option mb-1">
+    <div class="col-1 barre-outil bg-success" >
+      <div class="row favoris">
+        <div class="col-md-12 menu-option mb-3">
           <div class="option" align="center">
             <img src="https://img.icons8.com/color/48/000000/sales-performance.png"/>
           </div>
         </div>
-        <div class="col-md-12 menu-option mb-1">
+        <div class="col-md-12 menu-option mb-3">
           <div class="option" align="center">
             <img src="https://img.icons8.com/color/48/000000/industrial-scales-connecting.png"/>
           </div>
         </div>
-        <div class="col-md-12 menu-option mb-1">
+        <div class="col-md-12 menu-option mb-3">
           <div class="option" align="center">
             <img src="https://img.icons8.com/color/48/000000/event-log.png"/>
           </div>
         </div>
-        <div class="col-md-12 menu-option mb-1">
+        <div class="col-md-12 menu-option mb-3">
           <div class="option" align="center">
             <img src="https://img.icons8.com/color/48/000000/in-inventory.png"/>
           </div>
         </div>
-
-
+      </div>
+      <div class="row">
         <div class="col-md-12 " style="position: absolute;bottom: 0;cursor: pointer;">
-          <div class="option" align="center" >
+          <div class="option" style="position: relative;right:15%;" align="center" >
             <i class="material-icons text-light" (click)='Menu()'>
               apps
             </i>
@@ -46,6 +65,7 @@
     <div class="col-md-11 desktop">
 
     </div>
+
 
   </div>
 </div>

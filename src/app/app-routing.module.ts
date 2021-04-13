@@ -5,6 +5,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { HomeComponent } from './home/home.component';
 import { HomeComputerComponent } from './home-computer/home-computer.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AccountManagementComponent } from './account-management/account-management.component';
+import { WarehouseManagementComponent } from './warehouse-management/warehouse-management.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,14 @@ const routes: Routes = [
     path: 'home-computer',
     component: HomeComputerComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'account-management',
+    component: AccountManagementComponent
+  },
+  {
+    path: 'warehouse-management',
+    component: WarehouseManagementComponent
   }
 ];
 

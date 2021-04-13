@@ -1,0 +1,164 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <a class="navbar-brand text-light">
+    <i class="material-icons m-0" style="font-size: 35px; cursor: pointer;" (click)="Back()">
+      chevron_left
+    </i>
+    <span style="position: relative; bottom: 8px; cursor: pointer;" (click)="Back()">
+      Menu
+    </span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     <!-- <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>-->
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModal">
+        Créer Entrepôts
+      </button>
+    </form>
+  </div>
+</nav>
+<div class="container-fluid full-screen">
+  <div class="row">
+
+    <!--<div class="col-md-12 bar-menu p-3 bg-success text-light">
+      <div class="row">
+        <div class="col-md-1 p-0" style="cursor: pointer;">
+          <i class="material-icons" style="font-size: 35px; cursor: pointer;" (click)="Back()">
+            chevron_left
+          </i>
+          <span style="position: relative; bottom: 12px; cursor: pointer;" (click)="Back()">
+            Menu
+          </span>
+        </div>
+        <div class="col-md-8 ">
+          <h3>Gestion Entrepôts</h3>
+        </div>
+        <div class="col-md-3">
+          <button class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
+            <i class="material-icons">home</i>
+            Créer Entrepôts
+          </button>
+        </div>
+      </div>
+
+    </div>-->
+
+
+
+    <div class="col-md-12 account-content-menu">
+
+      <div class="container datatable">
+        <table datatable class="row-border hover" [dtTrigger]="dtTrigger">
+          <thead>
+            <tr>
+              <th>Matricule</th>
+              <th>Ville</th>
+              <th>Adresse</th>
+              <th>Téléphone</th>
+              <th>Adresse E-mail</th>
+              <th>Status</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let warehouse of wareHouses">
+              <td>{{ warehouse.matricule }}</td>
+              <td>{{ warehouse.ville}}</td>
+              <td>{{ warehouse.adresse }}</td>
+              <td>{{ warehouse.telephone }}</td>
+              <td>{{ warehouse.email }}</td>
+              <td>{{ warehouse.status }}</td>
+              <td>
+                <button class="btn btn-outline-warning">
+                  Modifier
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-outline-danger">Désactiver</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <form method="POST" (ngSubmit)="CreateWarehouse($event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Création d'un entrepôts</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <small class="text-muted">Inscrivez les informations suivantes</small>
+          <div class="row">
+            <div class="col">
+              <input type="text" name="ville" [(ngModel)]="wareHouseInfo.ville" class="form-control" placeholder="Entrez la ville">
+            </div>
+            <div class="col">
+              <input type="text" name="adresse" [(ngModel)]="wareHouseInfo.adresse" class="form-control" placeholder="Entrez l'adresse">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <input type="text" name="telephone" [(ngModel)]="wareHouseInfo.telephone" class="form-control" placeholder="Entrez le numéro de téléphone">
+            </div>
+            <div class="col">
+              <input type="email" name="email" [(ngModel)]="wareHouseInfo.email" class="form-control" placeholder="Entrez l'adresse e-mail">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <div class="input-group mb-3">
+                <select class="custom-select" name="status" [(ngModel)]="wareHouseInfo.status" id="inputGroupSelect01">
+                  <option selected>Choisir un status...</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>

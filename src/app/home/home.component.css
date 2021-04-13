@@ -43,13 +43,13 @@ input, button {
   height: 100vh;
   border: solid;
   /*background-image: url('../../assets/full-screen.jpg');*/
-  background-image: url('https://cdn.pixabay.com/photo/2014/05/23/05/06/cashew-nuts-351767_960_720.jpg');
+  background-image: url('https://cdn.pixabay.com/photo/2014/04/05/19/24/cashew-fruit-317298_960_720.jpg');
   background-size: cover;
-  filter: blur(3px);
--webkit-filter: blur(3px);
--moz-filter: blur(3px);
--o-filter: blur(3px);
--ms-filter: blur(3px);
+  filter: blur(2.5px);
+-webkit-filter: blur(2.5px);
+-moz-filter: blur(2.5px);
+-o-filter: blur(2.5px);
+-ms-filter: blur(2.5px);
 }
 
 .contenu {

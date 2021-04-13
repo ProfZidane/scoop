@@ -1,0 +1,29 @@
+
+h3, span, button, table, input, select, small {
+  /*font-family: 'Fredoka One', cursive;*/
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+}
+
+.full-screen {
+  border: solid;
+  height: 90vh;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+
+.bar-menu {
+  font-weight: 300;
+}
+
+.account-content-menu {
+  border: solid;
+  font-weight: 300;
+}
+
+.datatable {
+  padding: 1rem;
+  width: 80%;
+  font-weight: 300;
+}

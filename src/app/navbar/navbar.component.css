@@ -1,4 +1,5 @@
-* {
-  font-family: 'Fredoka One', cursive;
-
+a, button {
+  /*font-family: 'Fredoka One', cursive;*/
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
 }
