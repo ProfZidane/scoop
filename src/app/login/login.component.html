@@ -8,7 +8,7 @@
         <p class="mt-3">
           La coopérative toujours à la pointe de la technologie avec la
           <span >
-            <a href="lce-ci.com" class="text-scoop-primary">LOCOMOTIVE SARL</a>
+            <a href="lce-ci.com" class="text-success">LOCOMOTIVE SARL</a>
           </span>
         </p>
       </div>
@@ -17,10 +17,13 @@
     <div class="col-md-7 bord">
       <mat-progress-bar mode="query"  *ngIf="loading === false"></mat-progress-bar>
 
-      <small class="pww">J'ai oublié mon mot de passe? <a href="">Cliquez-ici</a></small>
+      <small class="pww">J'ai oublié mon mot de passe? <a href="" class="text-warning">Cliquez-ici</a></small>
 
       <div class="header">
-        <h3 class="text-scoop-primary">Connexion sur <span class="text-scoop-secondary">SCOOP-COOPRA</span></h3>
+        <div class="alert alert-danger" *ngIf="error.error_404 === true">
+          Une erreur est survenue. Veuillez réessayez plus tard !
+        </div>
+        <h3 class="text-success">Connexion sur <span class="text-warning">SCOOP-COOPRA</span></h3>
       </div>
 
       <div class="container login-form">
@@ -34,7 +37,7 @@
             <input type="password" name="password" [(ngModel)]="userInfo.password" class="form-control" id="exampleInputPassword1">
           </div>
           <br>
-          <button type="submit" class="btn bg-scoop-primary text-light" style="width: 100%;">Se connecter</button>
+          <button type="submit" class="btn bg-success text-light" style="width: 100%;">Se connecter</button>
         </form>
       </div>
 

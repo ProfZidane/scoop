@@ -34,7 +34,6 @@ input, button {
 }
 
 .pww a {
-  color:  #435a5a;
   text-decoration: underline;
 }
 
@@ -43,18 +42,17 @@ input, button {
   width: 65%;
 }
 
-.login-form form div label {
+/*.login-form form div label {
   color: #435a5a;
-  /*width: 70%;*/
-}
+}*/
 
 .copyright {
   text-decoration: underline;
 }
 
-.copyright small {
+/*.copyright small {
   color: #435a5a;
-}
+}*/
 
 
 #back-image {
@@ -83,7 +81,7 @@ input, button {
 }
 
 ::ng-deep .mat-progress-bar-fill::after {
-  background-color: #E53A14 !important;
+  background-color: #5cb85c !important;
 }
 
 ::ng-deep .mat-progress-bar-buffer {

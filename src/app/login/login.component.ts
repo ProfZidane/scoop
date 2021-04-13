@@ -12,6 +12,9 @@ userInfo = {
   password : ''
 };
 loading;
+error = {
+  error_404 : false
+};
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -19,17 +22,23 @@ loading;
 
   login() {
     this.loading = false;
+    this.error.error_404 = false;
     console.log(this.userInfo);
     this.authService.Login(this.userInfo).subscribe(
       (success) => {
         console.log(success);
         localStorage.setItem('token', success.token);
         localStorage.setItem('userData', JSON.stringify(success.user));
-        this.loading = true;
-        this.router.navigateByUrl('home-computer');
+        setTimeout( () => {
+          this.loading = true;
+          this.router.navigateByUrl('home-computer');
+        }, 1000);
       }, (err) => {
         console.log(err);
-        this.loading = true;
+        setTimeout( () => {
+          this.loading = true;
+          this.error.error_404 = true;
+        }, 1000);
       }
     );
   }
